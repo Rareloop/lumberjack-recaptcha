@@ -60,7 +60,7 @@ class ContactForm extends AbstractForm
      */
     protected $rules = [
         'my-input-name' => 'required',
-        'g-recaptcha-response' => 'required|recaptcha',
+        'g-recaptcha-response' => ['required', 'recaptcha'],
     ];
 }
 

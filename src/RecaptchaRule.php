@@ -18,7 +18,6 @@ class RecaptchaRule extends Rule
 
     public function check($value)
     {
-        return false;
         $recaptcha = new ReCaptcha($this->config->get('recaptcha.secret'));
 
         $resp = $recaptcha->setExpectedHostname($this->config->get('recaptcha.hostname'))
