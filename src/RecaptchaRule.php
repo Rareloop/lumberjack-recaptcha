@@ -21,7 +21,7 @@ class RecaptchaRule extends Rule
         return false;
         $recaptcha = new ReCaptcha($this->config->get('recaptcha.secret'));
 
-        $resp = $recaptcha->setExpectedHostname($_SERVER['SERVER_NAME'])
+        $resp = $recaptcha->setExpectedHostname($this->config->get('recaptcha.hostname'))
             ->verify($value, $_SERVER['REMOTE_ADDR']);
 
         return $resp->isSuccess();

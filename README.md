@@ -25,6 +25,9 @@ Add your ReCAPTCHA credentials to your `.env` file:
 ```
 GOOGLE_RECAPTCHA_KEY="ABC123"
 GOOGLE_RECAPTCHA_SECRET="ABC123"
+
+# Optional, if you need to specify the hostname directly
+GOOGLE_RECAPTCHA_HOSTNAME="my-hostname.com"
 ```
 
 ## Usage
