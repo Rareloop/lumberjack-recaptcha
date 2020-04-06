@@ -30,7 +30,7 @@ class RecaptchaExtension extends AbstractExtension
         return '<div class="g-recaptcha" data-sitekey="' . $this->config->get('recaptcha.key') . '"></div>';
     }
 
-    public function recaptchaInvisible($classes = '')
+    public function recaptchaInvisible($label, $classes = '')
     {
         wp_enqueue_script('lumberjack-recaptcha', 'https://www.google.com/recaptcha/api.js', [], 'v2');
 
@@ -43,7 +43,7 @@ class RecaptchaExtension extends AbstractExtension
                     document.getElementById("' . $buttonId . '").closest("form").submit();
                 }
             </script>
-            <button id="' . $buttonId . '" class="g-recaptcha ' . $classes . '" type="submit" data-sitekey="' . $this->config->get('recaptcha.key') . '" data-callback="' . $callbackName . '">Submit</button>
+            <button id="' . $buttonId . '" class="g-recaptcha ' . $classes . '" type="submit" data-sitekey="' . $this->config->get('recaptcha.key') . '" data-callback="' . $callbackName . '">' . $label . '</button>
         ';
     }
 }
