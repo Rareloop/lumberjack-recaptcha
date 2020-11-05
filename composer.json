@@ -2,7 +2,7 @@
   "name": "rareloop/lumberjack-recaptcha",
   "require": {
     "rareloop/lumberjack-validation": "^1.0.0",
-    "rareloop/lumberjack-core": "^4.0.0",
+    "rareloop/lumberjack-core": "^4.0.0 || ^5.0.0",
     "google/recaptcha": "^1.2"
   },
   "require-dev": {
